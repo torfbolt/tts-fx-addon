@@ -9,7 +9,7 @@ RUN python3 -m venv /opt/venv && \
 
 WORKDIR /app
 COPY run.sh .
-COPY filtered_tts.py .
+COPY tts_fx.py .
 
 RUN chmod +x run.sh
 

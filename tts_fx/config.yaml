@@ -1,4 +1,3 @@
-
 name: TTS Sound Effects
 version: "1.0"
 slug: tts_fx
@@ -8,19 +7,33 @@ boot: auto
 hassio_api: true
 host_network: true
 homeassistant_api: true
+
 options:
   piper_host: core-piper
   piper_port: 10200
+  piper_voice: ""
+  out_type: mp3
+  tts_filters: ""
+  background_filters: ""
+
 schema:
   piper_host: str
   piper_port: int
+  piper_voice: str?
+  out_type: str?
+  tts_filters: str?
+  background_filters: str?
+
 arch:
   - aarch64
   - armv7
   - amd64
   - i386
+
 init: false
+
 ports:
   10300/tcp: 10300
+
 map:
   - media:rw
