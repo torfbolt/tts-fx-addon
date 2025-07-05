@@ -1,0 +1,26 @@
+
+name: TTS Sound Effects
+version: "1.0"
+slug: tts_fx
+description: Applies sound effects to TTS audio
+startup: application
+boot: auto
+hassio_api: true
+host_network: true
+homeassistant_api: true
+options:
+  piper_host: core-piper
+  piper_port: 10200
+schema:
+  piper_host: str
+  piper_port: int
+arch:
+  - aarch64
+  - armv7
+  - amd64
+  - i386
+init: false
+ports:
+  10300/tcp: 10300
+map:
+  - media:rw
