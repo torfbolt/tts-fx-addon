@@ -15,6 +15,14 @@ Filters can be applied using SoX (Sound eXchange), with support for mixing backg
 
 ---
 
+## Installation
+
+Navigate in your Home Assistant frontend to Settings -> Add-ons -> Add-on Store and add this URL as an additional repository:
+
+https://github.com/torfbolt/tts-fx-addon
+
+---
+
 ## Usage
 
 ### API
@@ -52,7 +60,7 @@ Response JSON:
 
 ### Example "Apollo" Filter Settings
 
-To apply the classic "Apollo" effect chain as used in previous versions, set the environment variables as follows:
+To apply an "Apollo ground control" effect chain, set the environment variables as follows:
 
 TTS_FILTERS="pitch -300 highpass 300 lowpass 3000 compand 0.3,1 6:-70,-60,-20 -5 -90 0.2 reverb 50 50 100 100 0 2 overdrive 10 gain -n -3"
 
